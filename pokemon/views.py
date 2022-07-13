@@ -10,6 +10,7 @@ def url_input(request):
     """
     :return:
     """
+
     if request.method == "POST":
         try:
             response = get_poke()
@@ -29,6 +30,7 @@ def url_input(request):
                 weight=data['characteristics']['weight'],
                 date=timezone.now()
             )
+            print(data['name'])
             N.save()
             return JsonResponse(data)
         except Exception as e:
