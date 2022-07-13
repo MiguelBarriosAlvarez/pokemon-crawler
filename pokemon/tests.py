@@ -2,9 +2,8 @@ import requests
 import responses
 import unittest
 
-# Create your tests here.
-class Test_Request(unittest.TestCase):
 
+class Test_Request(unittest.TestCase):
     @responses.activate
     def testExample(self):
         responses.add(**{
